@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kode Keras Snake</title>
+	<link rel="stylesheet" type="text/css" href="anaconda.css"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Press+Start+2P">
+
+	<script type="text/javascript" language="javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="anaconda.js"></script>
+	<script type="text/javascript" language="javascript" src="anaconda-scoring.js"></script>
+	<script type="text/javascript" language="javascript" src="GameController/tests/gamecontroller.js"></script>
+	<meta name="description" content="Get ready for kodekeras.">
+	<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+	<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+	
+	</div>
+
+	<!-- AddToAny BEGIN -->
+	
+	<script type="text/javascript">
+	var a2a_config = a2a_config || {};
+	a2a_config.linkname = "Kode Keras Coming Soon";
+	a2a_config.linkurl = "http://kodekeras.com/pg";
+	a2a_config.locale = "id";
+	a2a_config.num_services = 6;
+	a2a_config.color_main = "undefined";
+	a2a_config.color_border = "undefined";
+	a2a_config.color_link_text = "undefined";
+	a2a_config.color_link_text_hover = "undefined";
+	a2a_config.color_bg = "undefined";
+	a2a_config.color_arrow = "undefined";
+	a2a_config.color_arrow_hover = "undefined";
+	a2a_config.prioritize = ["line"];
+	</script>
+	<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+	<!-- AddToAny END -->
+
+	<style type="text/css">
+		body {padding: 0; margin: 0; overflow: hidden;}
+	</style>
+</head>
+<body onload="toGame()">
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.5&appId=532252693598787";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!--
+	<audio id="mainBgm" loop>
+		<source src="http://dl.dropbox.com/u/26141789/canvas/snake/main.mp3" type="audio/mp3" />
+		<source src="http://dl.dropbox.com/u/26141789/canvas/snake/main.ogg" type="audio/ogg"/>
+	</audio>
+
+	<audio id="overBgm">
+		<source src="http://dl.dropbox.com/u/26141789/canvas/snake/go.mp3" type="audio/mp3" />
+		<source src="http://dl.dropbox.com/u/26141789/canvas/snake/go.ogg" type="audio/ogg"/>
+	</audio>
+
+	<audio id="foodBgm">
+		<source src="http://dl.dropbox.com/u/26141789/canvas/snake/food.mp3" type="audio/mp3" />
+		<source src="http://dl.dropbox.com/u/26141789/canvas/snake/food.ogg" type="audio/ogg"/>
+	</audio>
+	-->
+	<canvas id="canvas"></canvas>
+
+	<div id="reMenu">
+		<h1 id="snake2">
+		<img src="kk-icon50.png" style="margin-bottom: -25px; margin-right: 10px;">Game<img src="kk-icon50.png" style="margin-bottom: -25px; margin-right: 10px;"></h1>
+		<h1 id="snake2">Over</h1>
+		<p id="info2">Game Over</p>
+		<p>
+			<p>
+				<form method="POST" action="#" id="anacondaForm">
+					<input type="hidden" name="scoreData" id="scoreData"/>
+					<input type="text" name="username" id="username" placeholder="Your Name"/>
+					<input type="email" name="email" id="email" placeholder="Your Email"//>
+					<button id="submit">Submit</button>
+				</form>
+			</p>
+			<div id="ack"></div>
+		</p>
+		<div id="success"></div>
+		<a href="javascript: void(0)" id="restart" onclick="start()">Restart</a> 	
+		<a href="#" id="tweet" target="_blank" rel="nofollow">Share My Score</a>
+		<div class ="a2a_dd" data-href="http://kodekeras.com" data-layout="button_count"></div>
+		<div align="center">
+		Share to :
+			<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+			<a class="a2a_button_facebook"></a>
+			<a class="a2a_button_twitter"></a>
+			<a class="a2a_button_google_plus"></a>
+			<a class="a2a_button_line"></a>
+		</div>
+	</div>
+
+	<div id="menu">
+		<h1 id="snake"><img src="kk-icon50.png" style="margin-bottom: 10px; margin-right: 10px;">Snake<img src="kk-icon50.png" style="margin-bottom: 10px; margin-left: 10px;"></h1>
+		<a href="javascript: void(0)" id="start" onclick="start();" >Start</a>
+		<p id="loading">Loading...</p>
+	</div>
+
+	<div class="line-separator-left" ></div>
+	
+	<p id="score">Score: 0</p>
+	
+</body>
+</html>
+
+
+
+
