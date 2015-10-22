@@ -42,7 +42,7 @@
 			padding-left: 200px;
 		}
 
-		a#start, a#restart, a#tweet, p#loading {
+		a#start, a#restart, a#tweet, p#loading, a#fb {
 			font-size: 24px;
 			display: block;
 			top: 30%;	
@@ -52,13 +52,13 @@
 			margin: 0 auto;
 		}
 
-		a#start:hover, a#restart:hover, a#tweet:hover{
+		a#start:hover, a#restart:hover, a#tweet:hover, a#fb:hover{
 			color: #349fcd;
 		}
 
 		a#restart {width: 165px; top: 10%; margin-top: 80px;}
 
-		a#tweet {top: 15%; width: 342px;}
+		a#tweet, a#fb {top: 15%; width: 342px;}
 
 		#score {
 			bottom: 10px;

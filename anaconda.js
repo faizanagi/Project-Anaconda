@@ -247,7 +247,10 @@ function gameOver(){
 //	overBgm.play();
 	inGame = false;
 	var tweet = document.getElementById("tweet");
-	tweet.href='http://twitter.com/share?url=http://bit.ly/SnakeHTML5&text=I scored ' +score+ ' points in the classic HTML5 Snake game&count=horiztonal&via=cssdeck';
+	tweet.href='http://twitter.com/share?url=http://bit.ly/SnakeHTML5&text=I scored ' +score+ ' points in the KodeKeras The Game : Anaconda';
+
+	var fb = document.getElementById("fb");
+	fb.href='https://www.facebook.com/dialog/feed?app_id=532252693598787&display=popup&caption=I%20Have%20Score '+score+' &link=http://kodekeras.com&redirect_uri=http://kodekeras.com &description=KodeKeras The Game : Anaconda';
 
 	var goText = document.getElementById("info2");
 
