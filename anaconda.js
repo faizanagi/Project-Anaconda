@@ -77,32 +77,33 @@ function toGame(){
 
 	menuDisplay();
 	
-	GameController.init({
-    left: {
-      type: 'dpad',
-      position: {left: '10%', bottom: '20%'},
-      dpad: {
-        up: { width: '5%', height: '10%',
-        touchStart: function(){
-            dir="up";
-        }},
-        down: { width: '5%', height: '10%',
-        touchStart: function(){
-            dir="down";
-        }},
-        left: { width: '10%', height: '5%',
-        touchStart: function(){
-            dir="left";
-        }},
-        right: { width: '10%', height: '5%',
-        touchStart: function(){
-            dir="right";
-        }}
-      }
-    },
-    right: false
-  });
-
+	if(isTouchDevice()){
+		GameController.init({
+		    left: {
+		      type: 'dpad',
+		      position: {left: '10%', bottom: '20%'},
+		      dpad: {
+		        up: { width: '5%', height: '10%',
+		        touchStart: function(){
+		            dir="up";
+		        }},
+		        down: { width: '5%', height: '10%',
+		        touchStart: function(){
+		            dir="down";
+		        }},
+		        left: { width: '10%', height: '5%',
+		        touchStart: function(){
+		            dir="left";
+		        }},
+		        right: { width: '10%', height: '5%',
+		        touchStart: function(){
+		            dir="right";
+		        }}
+		      }
+		    },
+		    right: false
+	    });
+	}
 
   		
 }
@@ -247,10 +248,15 @@ function gameOver(){
 //	overBgm.play();
 	inGame = false;
 	var tweet = document.getElementById("tweet");
-	tweet.href='http://twitter.com/share?url=http://bit.ly/SnakeHTML5&text=I scored ' +score+ ' points in the KodeKeras The Game : Anaconda';
+	tweet.href='http://twitter.com/share?url=kodekeras.com scored ' +score+ ' points in the KodeKeras The Game : Anaconda';
 
 	var fb = document.getElementById("fb");
 	fb.href='https://www.facebook.com/dialog/feed?app_id=532252693598787&display=popup&caption=I%20Have%20Score '+score+' &link=http://kodekeras.com&redirect_uri=http://kodekeras.com &description=KodeKeras The Game : Anaconda';
+
+	var line = document.getElementById("line");
+	line.href='line://msg/text/I Have scored ' + score + ' in KodeKeras The Game : Anaconda http://kodekeras.com/';
+
+	
 
 	var goText = document.getElementById("info2");
 
@@ -280,3 +286,8 @@ document.onkeydown = function(e) {
 	}
 }
 
+function isTouchDevice() {
+ return (('ontouchstart' in window)
+      || (navigator.MaxTouchPoints > 0)
+      || (navigator.msMaxTouchPoints > 0));
+}
